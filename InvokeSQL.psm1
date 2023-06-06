@@ -246,12 +246,12 @@ function Install-InvokeSQLAnywhereSQL {
 function ConvertTo-SQLAnywhereConnectionString {
     param(
         [Parameter(Mandatory,ValueFromPipelineByPropertyName)][string]$Host,
-        [Parameter(Mandatory,ValueFromPipelineByPropertyName)][string]$DatabaseName,
+        [Parameter(Mandatory,ValueFromPipelineByPropertyName)][string]$DatabaseNameM,
         [Parameter(Mandatory,ValueFromPipelineByPropertyName)][string]$ServerName,
         [Parameter(Mandatory,ValueFromPipelineByPropertyName)][string]$UserName,
         [Parameter(Mandatory,ValueFromPipelineByPropertyName)][string]$Password
     )
-    "UID=$UserName;PWD=$Password;Host=$Host;DatabaseName=$DatabaseName;ServerName=$ServerName"
+    "UID=$UserName;PWD=$Password;Host=$Host;DatabaseName=$DatabaseNameM;ServerName=$ServerName"
 }
 
 $DatabaseEngineClassMap = [PSCustomObject][Ordered]@{
